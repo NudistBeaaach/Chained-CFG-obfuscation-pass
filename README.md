@@ -10,3 +10,7 @@ This CFG flattening pass is applied at the scope of the basic block which means 
 ![Non obfuscated binary](./screenshots/Obf.PNG)
 
 The raw size of the file is not much larger (in this case 20 % larger) but the graph is drastically different with much more basic bloc which symbolize a single program's instruction, the other part of the basic block is a xor operation on the local variable used by the dispacher to dinamically find his path in this giant mess.
+
+## Build this pass
+This pass uses the new pass manager which means you can build it with cmake (see this [tutorial](https://github.com/banach-space/llvm-tutor#helloworld-your-first-pass) and load it via ```opt``` using this command:
+```path/to/llvm/bin/opt -load-pass-plugin /build/folder/libPassTheFishe.so -passes=Pass-Fishe -O0 input.ll -o output.ll```
