@@ -5,4 +5,5 @@ This CFG flattening pass is applied at the scope of the basic block which means 
 On the left we can see a non obfuscated binary and on the right an obfuscated binary using the chained CFG flattening pass.
 ![Non obfuscated binary](./screenshots/NonObf.PNG)
 ![Non obfuscated binary](./screenshots/Obf.PNG)
+
 The raw size of the file is not much larger (in this case 20 % larger) but the graph is drastically different with much more basic bloc which symbolize a single program's instruction, the other part of the basic block is a xor operation on the local variable used by the dispacher to dinamically find his path in this giant mess.
