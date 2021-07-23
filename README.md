@@ -5,3 +5,4 @@ This CFG flattening pass is applied at the scope of the basic block which means 
 
 ![Non obfuscated binary](./screenshots/NonObf.PNG)
 test
+![Non obfuscated binary](./screenshots/Obf.PNG)
