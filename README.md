@@ -16,6 +16,7 @@ This pass uses the new pass manager which means you can build it with cmake (see
 ```path/to/llvm/bin/opt -load-pass-plugin /build/folder/libPassTheFishe.so -passes=Pass-Fishe -O0 input.ll -o output.ll```.
 Note that if you want to use the legacy pass manager you will need to change the pass implementation and registration in ```Pass/Pass.h``` file.
 ## What to do next?
-* Merge this pass with CFG flattening on other levels: * at the function level (classic one) 
-                                                       * and at the module level to merge
-
+* This CFG flattening is an intra-basic block obfuscation thus merging this pass with CFG flattening on other levels would be fun:
++ At the function level(inter-basic block)
++ At the module level (inter-function)
+* As previously said, combining this pass with MBA operation can be really hard to reverse
