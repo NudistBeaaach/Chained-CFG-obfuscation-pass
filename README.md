@@ -16,7 +16,7 @@ The raw size of the file is not much larger (in this case 20 % larger) but the g
 * You first need to get LLVM working by either using your 5 To of RAM to build it from the sources or simply install it with ```apt install clang build-essential llvm-12-dev```.
 * We'll use cmake to build a makefile for the pass so you can modify the ```Pass/CMakelists.txt``` with your own installation/includes directories.
 * You can then emit the LLVM IR from the source code you want with ```clang -O0 -S -emit-llvm input.c -o output.ll```.
-* build the pass with cmake -DLT_LLVM_INSTALL_DIR=<installation dir of LLVM> <where you want your pass.so to be created>
+* build the pass with ```cmake -DLT_LLVM_INSTALL_DIR=<installation dir of LLVM> <where you want your pass.so to be created>```.
 * run the pass with ```path/to/llvm/bin/opt -load-pass-plugin /build/folder/libPassTheFishe.so -passes=Pass-Fishe -O0 input.ll -o output.ll```.
 * Note that if you want to use the legacy pass manager you will need to change the pass implementation and registration in the ```Pass/Pass.h``` file check this [link](https://llvm.org/docs/WritingAnLLVMPass.html) to see how the legacy PM works.
 
