@@ -20,7 +20,7 @@ The raw size of the file is not much larger (in this case 20 % larger) but the g
 * Note that if you want to use the legacy pass manager you will need to change the pass implementation and registration in the ```Pass/Pass.h``` file check this [link](https://llvm.org/docs/WritingAnLLVMPass.html) to see how the legacy PM works.
 
 ## What to do next?
-* This CFG flattening is an intra-basic block obfuscation thus merging this pass with CFG flattening on other levels would be really hard to lift/deobfuscate:
+* This CFG flattening is an intra-basic block obfuscation thus merging this pass with CFG flattening on other levels would be really fun/hard to deobfuscate:
     + At the function level(inter-basic block)
     + At the module level (inter-function)
     + At the OS level (inter-process) lmao
