@@ -9,7 +9,7 @@
 
 using namespace llvm;
 
-typedef std::tuple<BasicBlock*, BasicBlock*, BasicBlock*> CreatedBlock;
+  typedef std::tuple<BasicBlock*, BasicBlock*, BasicBlock*> CreatedBlock;
 
   void FixupPhiNodes(std::vector<PHINode*> PHIList, std::vector<CreatedBlock> CreatedBlocks);
 
