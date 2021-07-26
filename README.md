@@ -4,8 +4,8 @@ LLVM obfuscation out-of-tree pass, flattening at the basic block's level and tur
 ## Pass description
 This CFG flattening pass is applied at the scope of the basic block which means that even programs with few basic blocks will be obfuscated. The larger the size of the basic blocks, the better the obfuscation will be. This is why this pass can be pretty effective combined with some MBA operation : they can potentially increase the size of each basic block and therefore the number of case in the basic block's dispacher. To find the right way the dispacher is going to use a local variable for each function with a random value and calculate the next case's value.
 
-* On the left we can see a non obfuscated binary
-* On the right an obfuscated binary using the chained CFG flattening pass.
+* On the left we can see the main function of a non obfuscated binary.
+* On the right the same function but obfuscated with chained CFG flattening.
 
 ![screenshot](./screenshots/Image.png)
 
