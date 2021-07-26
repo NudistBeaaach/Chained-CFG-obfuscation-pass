@@ -17,6 +17,7 @@ The raw size of the file is not much larger (in this case 20 % larger) but the g
 * You can then emit the LLVM IR from the source code you want with ```clang -O0 -S -emit-llvm input.c -o output.ll```.
 * build the pass with ```cmake <your CMakeLists.txt file location>``` and ```make```.
 * run the pass with ```path/to/llvm/bin/opt -load-pass-plugin /build/folder/libPassTheFishe.so -passes=Pass-Fishe -O0 output.ll -o output_mod.ll```.
+* You can now recompile your LLVM IR.
 * Note that if you want to use the legacy pass manager you will need to change the pass implementation and registration in the ```Pass/Pass.h``` file check this [link](https://llvm.org/docs/WritingAnLLVMPass.html) to see how the legacy PM works.
 
 ## What to do next?
