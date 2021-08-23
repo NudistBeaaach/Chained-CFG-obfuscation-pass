@@ -12,7 +12,7 @@ This CFG flattening pass is applied at the scope of the basic block which means 
 The raw size of the file is not much larger (in this case 20 % larger) but the graph is drastically different with much more basic bloc which symbolize a single program's instruction, the other part of the basic block is a xor operation on the local variable used by the dispacher to dinamically find his path in this giant mess.
 
 ## Build this pass
-* You first need to get LLVM working by either using your 5 To of RAM to build it from the sources or simply install it with ```apt install clang build-essential llvm-12-dev```.
+* You first need to get LLVM working by either using your 5 Tb of RAM to build it from the sources or simply install it with ```apt install clang build-essential llvm-12-dev```.
 * We'll use cmake to build a makefile for the pass so you can modify the ```Pass/CMakelists.txt``` with your own LLVM installation/includes directories.
 * You can then emit the LLVM IR from the source code you want with ```clang -O0 -S -emit-llvm input.c -o output.ll```.
 * build the pass with ```cmake <your CMakeLists.txt file location>``` and ```make```.
